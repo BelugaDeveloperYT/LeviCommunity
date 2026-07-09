@@ -1,32 +1,224 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 40px;
-    background: #f5f5f5;
+/* ===========================
+   General
+=========================== */
+
+:root{
+    --bg:#f8f9fa;
+    --text:#212529;
+    --card:#ffffff;
+    --nav:#0d6efd;
+    --footer:#212529;
 }
 
-nav {
-    margin-bottom: 20px;
+body.dark-mode{
+    --bg:#121212;
+    --text:#f1f1f1;
+    --card:#1e1e1e;
+    --nav:#1b1b1b;
+    --footer:#000000;
 }
 
-nav a {
-    margin-right: 15px;
-    text-decoration: none;
-    color: #0366d6;
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:Arial, Helvetica, sans-serif;
+    transition:.3s;
 }
 
-form {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 500px;
+/* ===========================
+   Navbar
+=========================== */
+
+.navbar{
+    background:var(--nav)!important;
 }
 
-input, textarea, select {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
+.navbar-brand{
+    font-size:1.5rem;
+    font-weight:bold;
 }
 
-button {
-    padding: 10px 20px;
+.nav-link{
+    transition:.3s;
+}
+
+.nav-link:hover{
+    opacity:.75;
+}
+
+/* ===========================
+   Hero
+=========================== */
+
+section.bg-light{
+    background:var(--bg)!important;
+}
+
+/* ===========================
+   Cards
+=========================== */
+
+.card{
+    background:var(--card);
+    color:var(--text);
+    border:none;
+    border-radius:15px;
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 .75rem 1.5rem rgba(0,0,0,.15)!important;
+}
+
+.card-body i{
+    margin-bottom:15px;
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.btn{
+    border-radius:10px;
+    transition:.25s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+/* ===========================
+   Forms
+=========================== */
+
+.form-control,
+.form-select,
+textarea{
+
+    background:var(--card);
+    color:var(--text);
+
+    border-radius:10px;
+    border:1px solid #ced4da;
+
+}
+
+.form-control:focus,
+.form-select:focus,
+textarea:focus{
+
+    box-shadow:none;
+    border-color:#0d6efd;
+
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-select,
+body.dark-mode textarea{
+
+    background:#2b2b2b;
+    color:white;
+    border-color:#444;
+
+}
+
+body.dark-mode .form-control::placeholder,
+body.dark-mode textarea::placeholder{
+    color:#bbbbbb;
+}
+
+/* ===========================
+   Search
+=========================== */
+
+#searchInput{
+
+    border-radius:10px;
+
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer{
+
+    background:var(--footer)!important;
+    color:white;
+
+}
+
+footer a{
+
+    color:white;
+    text-decoration:none;
+
+}
+
+footer a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ===========================
+   Dark Mode Card Colors
+=========================== */
+
+body.dark-mode .card{
+
+    background:#1e1e1e;
+    color:white;
+
+}
+
+body.dark-mode .bg-light{
+
+    background:#181818!important;
+
+}
+
+body.dark-mode .bg-body-tertiary{
+
+    background:#202020!important;
+
+}
+
+/* ===========================
+   Animations
+=========================== */
+
+.card,
+.btn,
+.nav-link{
+
+    transition:all .25s ease;
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+    .display-4{
+
+        font-size:2.3rem;
+
+    }
+
+    .display-5{
+
+        font-size:2rem;
+
+    }
+
+    .card{
+
+        margin-bottom:20px;
+
+    }
+
 }
